@@ -184,4 +184,10 @@ If justified by production requirements:
 
 ## 15. My contribution
 
-<!-- Fill in honestly before submitting: which parts you wrote yourself, which you adapted, and any tools you used. -->
+This repository should be submitted with an accurate personal-contribution statement. Before submission, replace the bullets below with the work you personally completed and any assistance/tools you used.
+
+- Implemented: URL-context parsing, deterministic variant matching, DOM personalization, and defensive error handling.
+- Designed: configuration-driven content and priority rules for keyword, ad, and campaign context.
+- Tested: required scenarios, normalization, invalid input, allowlist behavior, and fallback handling using `tests/test-runner.js`.
+- Tooling/assistance: disclose any IDE, AI assistant, libraries, or copied/adapted code used during development.
+

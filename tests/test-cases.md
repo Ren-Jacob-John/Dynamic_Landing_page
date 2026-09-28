@@ -1,23 +1,25 @@
 # Test Cases
 
+Automated results below were verified with `node tests/test-runner.js`. Browser-only checks remain marked MANUAL because they require a real browser session.
+
 ## Test Matrix
 
 | # | Input | Expected result | Status |
 |---:|---|---|---|
-| 1 | No parameters | Original page remains unchanged | ☐ |
-| 2 | `?keyword=rfid-inventory-tracking` | Inventory variation | ☐ |
-| 3 | `?keyword=rfid-tool-tracking` | Tool Tracking variation | ☐ |
-| 4 | `?keyword=rfid-reader` | RFID Hardware variation | ☐ |
-| 5 | `?ad=stop-losing-tools` | Tool Tracking variation | ☐ |
-| 6 | `?keyword=hello-world` | Original page | ☐ |
-| 7 | `?keyword=RFID-TOOL-TRACKING` | Tool Tracking variation | ☐ |
-| 8 | `?keyword=RfId_ToOl_TrAcKiNg` | Tool Tracking variation | ☐ |
-| 9 | `?keyword=` | Original page | ☐ |
-| 10 | `?unknown=value` | Original page | ☐ |
-| 11 | `?debug=true`, `?DEBUG=true`, `?debug=TRUE` | Original page + console debug output (parameter name and value are case-insensitive) | ☐ |
-| 12 | `?keyword=rfid-tool-tracking&ad=rfid-reader&campaign=inventory` | Tool Tracking; keyword has priority | ☐ |
-| 13 | JavaScript disabled | Original HTML remains usable | ☐ |
-| 14 | Remove `[data-dynamic="headline"]` in DevTools | No fatal JS error; other targets can still update | ☐ |
+| 1 | No parameters | Original page remains unchanged | PASS |
+| 2 | `?keyword=rfid-inventory-tracking` | Inventory variation | PASS |
+| 3 | `?keyword=rfid-tool-tracking` | Tool Tracking variation | PASS |
+| 4 | `?keyword=rfid-reader` | RFID Hardware variation | PASS |
+| 5 | `?ad=stop-losing-tools` | Tool Tracking variation | PASS |
+| 6 | `?keyword=hello-world` | Original page | PASS |
+| 7 | `?keyword=RFID-TOOL-TRACKING` | Tool Tracking variation | PASS |
+| 8 | `?keyword=RfId_ToOl_TrAcKiNg` | Tool Tracking variation | PASS |
+| 9 | `?keyword=` | Original page | PASS |
+| 10 | `?unknown=value` | Original page | PASS |
+| 11 | `?debug=true`, `?DEBUG=true`, `?debug=TRUE` | Original page + console debug output (parameter name and value are case-insensitive) | PASS |
+| 12 | `?keyword=rfid-tool-tracking&ad=rfid-reader&campaign=inventory` | Tool Tracking; keyword has priority | PASS |
+| 13 | JavaScript disabled | Original HTML remains usable | MANUAL |
+| 14 | Remove `[data-dynamic="headline"]` in DevTools | No fatal JS error; other targets can still update | PASS |
 
 ## Additional normalization checks
 

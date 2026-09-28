@@ -74,9 +74,9 @@ dynamic-landing-page/
 ├── dynamic-landing.js
 ├── README.md
 ├── IMPLEMENTATION_NOTES.md
-├── DEMO_VIDEO_SCRIPT.md
 ├── tests/
-│   └── test-cases.md
+│   ├── test-cases.md
+│   └── test-runner.js
 └── images/
     ├── rfid-default.jpg
     ├── rfid-inventory.jpg
@@ -84,15 +84,21 @@ dynamic-landing-page/
     └── rfid-reader.jpg
 ```
 
-- `index.html` — the single canonical landing page and default content.
+- `index.html` — the single canonical/base landing page and default content. The personalization layer is additive and does not require duplicate landing pages.
 - `styles.css` — responsive B2B SaaS/RFID presentation.
 - `dynamic-landing.js` — URL parsing, normalization, detection, configuration, and DOM updates.
-- `tests/test-cases.md` — manual and implementation-level test matrix.
+- `tests/test-cases.md` — test matrix with recorded automated results and manual browser checks.
+- `tests/test-runner.js` — dependency-free Node.js regression test runner.
 - `IMPLEMENTATION_NOTES.md` — interview-oriented engineering explanation.
-- `DEMO_VIDEO_SCRIPT.md` — 3–5 minute demonstration plan.
 - `images/` — local placeholder/demo imagery.
 
-## 6. Supported URL Parameters
+## 6. Base Page vs Personalization Layer
+
+`index.html` is the single base landing page used for the proof of concept. Its default copy and structure remain in the HTML. `dynamic-landing.js` is the small personalization layer added on top: it reads URL context and changes only the six marked `data-dynamic` elements at runtime. There are no duplicate landing pages or server-side variants. Removing the script leaves the base page usable.
+
+For this self-contained assessment repository, the base page is included in the repository so the evaluator can run the project without access to an external website.
+
+## 7. Supported URL Parameters
 
 | Parameter | Purpose |
 |---|---|
